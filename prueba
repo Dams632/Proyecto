@@ -1,3 +1,8 @@
 <?php 
-
+  $conexion = pg_connect("host=localhost dbname=Torneo_futsal user=dams password=1006859308Ti");
+    if($conexion){
+        echo "Se conecto correctamente";
+    }else{
+        echo "No se conecto";
+    }
 ?>
