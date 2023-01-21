@@ -3,7 +3,7 @@
     <head></head>
     <body>
         <?php
-        $dbconn = pg_connect("postgresql://postgres:Ndu3nPC3Lan2NWB3Kzj2@containers-us-west-192.railway.app:5962/railway")
+        $dbconn = pg_connect("postgresql://postgres:sWnGGNFqUD5XWcLNqPV9@containers-us-west-162.railway.app:5484/railway")
         or die("Could not connect");
         echo "Connected successfully";
         ?>
