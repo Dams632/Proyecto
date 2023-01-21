@@ -3,12 +3,12 @@
     <head></head>
     <body>
         <?php
-        $dbconn = pg_connect("postgresql://postgres:lGMzkadcIcd4VwrSzn88@containers-us-west-126.railway.app:6625/railway")
+        $dbconn = pg_connect("postgresql://postgres:Ndu3nPC3Lan2NWB3Kzj2@containers-us-west-192.railway.app:5962/railway")
         or die("Could not connect");
         echo "Connected successfully";
         ?>
         <?php 
-            $resultado= pg_query($dbconn,"SELECT nombre,capacidad FROM canchas");
+            $resultado= pg_query($dbconn,"SELECT nombre,cod_cancha FROM canchas");
             if(!$resultado){
                 echo "Error";
                 exit;
