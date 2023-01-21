@@ -7,6 +7,16 @@
         or die("Could not connect");
         echo "Connected successfully";
         ?>
+        <?php 
+            $resultado= pg_query($dbconn,"SELECT nombre,capacidad FROM canchas");
+            if(!$resultado){
+                echo "Error";
+                exit;
+            }
+            while( $obj = pg_fetch_object($resultado) )
+                         echo $obj->capacidad." - ".$obj->nombre."<br />";
+            ?>
+        ?>
         <h1><?php echo "this mensage nuver";?></h1>
     </body>
 </html>
