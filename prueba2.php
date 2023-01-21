@@ -16,7 +16,6 @@
         or die("Could not connect");
         echo "Connected successfully";
         echo "Que sueñero";
-
        /* function listarPersonas( $dbconn )
     {
         $sql = "SELECT * FROM canchas ORDER BY cod_cancha";
