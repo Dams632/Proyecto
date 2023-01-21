@@ -1,7 +1,4 @@
-<html>
-    <title>Pruebas</title>
-    <head>  HolaBUnas</head>
-    <body>
+
         <?php 
        echo "Hola buenas nochees xd";
        
@@ -41,5 +38,3 @@
         while( $obj = pg_fetch_object($resultado) )
                      echo $obj->capacidad." - ".$obj->nombre."<br />";
         ?>
-    </body>
-</html>
