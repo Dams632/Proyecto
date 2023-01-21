@@ -16,7 +16,7 @@
         or die("Could not connect");
         echo "Connected successfully";
         echo "Que sueñero";
-
+    pg_close($dbconn);
        /* function listarPersonas( $dbconn )
     {
         $sql = "SELECT * FROM canchas ORDER BY cod_cancha";
