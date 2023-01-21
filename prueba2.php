@@ -4,13 +4,6 @@
     <body>
         <?php 
        echo "Hola buenas nochees xd";
-      /* $dbconn = pg_connect("postgresql://postgres:lGMzkadcIcd4VwrSzn88@containers-us-west-126.railway.app:6625/railway");  
-        if (!$dbconn){  
-        echo "<center><h1>Doesn't work =(</h1></center>";  
-        }else{  
-         echo "<center><h1>Good connection</h1></center>";  
-        }
-        pg_close($dbconn);*/
        
         $dbconn = pg_connect("postgresql://postgres:lGMzkadcIcd4VwrSzn88@containers-us-west-126.railway.app:6625/railway")
         or die("Could not connect");
@@ -46,7 +39,7 @@
             exit;
         }
         while( $obj = pg_fetch_object($resultado) )
-                     echo $obj->cod_cancha." - ".$obj->nombre."<br />";
+                     echo $obj->capacidad." - ".$obj->nombre."<br />";
         ?>
     </body>
 </html>
