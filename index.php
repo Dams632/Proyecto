@@ -14,7 +14,7 @@
                 exit;
             }
             while( $obj = pg_fetch_object($resultado) )
-                         echo $obj->capacidad." - ".$obj->nombre."<br />";
+                         echo $obj->cod_cancha." - ".$obj->nombre."<br />";
             ?>
         ?>
         <h1><?php echo "this mensage nuver";?></h1>
