@@ -18,7 +18,7 @@
         <?php 
             $dbconn = "INSERT INTO ciudades (cod_ciudad, nombre)
             VALUES (256, 'Villavicencio')";
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($dbconn) === TRUE) {
                 echo "New record created successfully";}
         ?>
 
