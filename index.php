@@ -12,11 +12,7 @@
               echo "Query: Un error ha occurido.\n";
               exit;
             }
-    }
-        if($prueba){
-            echo "Ingresado";
-        }
-        
+    }      
         ?>
 
         <?php 
@@ -37,9 +33,9 @@
         ?>
 
 <form action="" method="post">
-<label>Nombre</label>
+<label>Codigo de Ciudad</label>
 <input type="text" name="cod_ciudad" value="" class="txtbox long"/>
-<label>apellido</label>
+<label>Nombre de ciudad</label>
 <input type="text" name="nombre" value="" class="txtbox long"/>
 
 <br />
