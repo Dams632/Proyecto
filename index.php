@@ -16,10 +16,10 @@
                          echo $obj->cod_cancha." - ".$obj->nombre."<br>";
         ?>
         <?php 
-            $dbconn = "INSERT INTO ciudades (cod_ciudad, nombre)
+            $sql = "INSERT INTO ciudades (cod_ciudad, nombre)
             VALUES (256, 'Villavicencio')";
-            if ($conn->query($dbconn) === TRUE) {
-                echo "New record created successfully";}
+            /*if ($dbconn->query($sql) === TRUE) {
+                echo "New record created successfully";}*/
         ?>
 
         <h1><?php echo "this mensage nuver";?></h1>
