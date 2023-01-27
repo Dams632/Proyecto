@@ -15,14 +15,14 @@
             while( $obj = pg_fetch_object($resultado) )
                          echo $obj->cod_cancha." - ".$obj->nombre."<br>";
         ?>
-        <?php
+        
+
+        <h1><?php echo "this mensage nuver";?></h1>
+        <button type="button" onclick="<?php
             $prueba= pg_query($dbconn,"insert into ciudades(cod_ciudad,nombre) values(256,'Villavicencio')");
             //$query = "INSERT INTO ciudades (cod_ciudad, nombre) VALUES (256, 'Villavicencio')";
             /*if ($dbconn->query($sql) === TRUE) {
                 echo "New record created successfully";}*/
-        ?>
-
-        <h1><?php echo "this mensage nuver";?></h1>
-        <button type="button">Click Me!</button>
+        ?>">Click Me!</button>
     </body>
 </html>
