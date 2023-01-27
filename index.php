@@ -5,8 +5,7 @@
         <?php
         $dbconn = pg_connect("postgresql://postgres:YgonU3pdXNxE32wD5Zcy@containers-us-west-63.railway.app:7471/railway")
         or die("Could not connect");
-        echo "Connected successfully";
-        ?>
+        echo "Connected successfully";?>
         <?php 
             $resultado= pg_query($dbconn,"SELECT nombre,cod_cancha FROM canchas");
             if(!$resultado){
@@ -14,8 +13,8 @@
                 exit;
             }
             while( $obj = pg_fetch_object($resultado) )
-                         echo $obj->cod_cancha." - ".$obj->nombre."<br />";
-            ?>
+                         echo $obj->cod_cancha." - ".$obj->nombre."<br>";
+            
         ?>
         <h1><?php echo "this mensage nuver";?></h1>
         <button type="button">Click Me!</button>
