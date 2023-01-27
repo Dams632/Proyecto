@@ -14,8 +14,14 @@
             }
             while( $obj = pg_fetch_object($resultado) )
                          echo $obj->cod_cancha." - ".$obj->nombre."<br>";
-            
         ?>
+        <?php 
+            $dbconn = "INSERT INTO ciudades (cod_ciudad, nombre)
+            VALUES (256, 'Villavicencio')";
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";}
+        ?>
+
         <h1><?php echo "this mensage nuver";?></h1>
         <button type="button">Click Me!</button>
     </body>
