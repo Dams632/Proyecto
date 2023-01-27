@@ -7,7 +7,7 @@
         or die("Could not connect");
         echo "Connected successfully";
         if($_POST){   
-            $result = pg_query($dbconn, "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (". ((int)$_POST['cod_ciudad']) .",'" . pg_escape_string($_POST['nombre']) . "')");
+            $result = pg_query($dbconn, "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (". ((int)$_POST['cod_ciudad']) .",'" . ($_POST['nombre']) . "')");
             if (!$result) {
               echo "Query: Un error ha occurido.\n";
               exit;
