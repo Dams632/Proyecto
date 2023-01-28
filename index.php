@@ -7,8 +7,8 @@
          $dbconn = pg_connect("postgresql://postgres:YgonU3pdXNxE32wD5Zcy@containers-us-west-63.railway.app:7471/railway")
         or die("Could not connect");
         echo "Connected successfully";
-        if($_POST){   
-            require_once $result = pg_query($dbconn, "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (". ((int)$_POST['cod_ciudad']) .",'" . ($_POST['nombre']) . "')");
+         if($_POST){   
+             $result = pg_query($dbconn, require_once "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (". ((int)$_POST['cod_ciudad']) .",'" . ($_POST['nombre']) . "')");
             if (!$result) {
               echo "Query: Un error ha occurido.\n";
               exit;
