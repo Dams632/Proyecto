@@ -15,24 +15,7 @@
             }
     }      
         ?>
-
-        <?php 
-            $resultado= pg_query($dbconn,"SELECT nombre,cod_cancha FROM canchas");
-            if(!$resultado){
-                echo "Error";
-                exit;
-            }
-            while( $obj = pg_fetch_object($resultado) )
-                         echo $obj->cod_cancha." - ".$obj->nombre."<br>";
-        ?>
         
-
-        <h1><?php echo "this mensage nuver";?></h1>
-        <?php 
-            
-               
-        ?>
-
 <form action="" method="post">
 <label>Codigo de Ciudad</label>
 <input type="text" name="cod_ciudad" value="" class="txtbox long"/>
