@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/canchas.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
@@ -34,32 +34,14 @@
         </nav>
     </header>
     <main>
-        <h1>Pagina Canchas</h1>
-        <section class="section-canchas">
-            <form action="">
-                <h2>Agregar cancha: </h2>
-                <input type="text" name="agregarCancha" id="">
-                <input type="text" name="capacidadC" id="">
-                <button>Agregar</button>
-            </form>
-        </section>
-        <section class="section-canchas" class="modificar">
-            <form action="">
-                <h2>Consulta/Modifica cancha: </h2>
-                <input type="text" name="codCancha" id="">
-                <input type="text" name="modificarCancha" id="">
-                <input type="text" name="capacidad" id="">
-                <button>Buscar</button>
-                <button>Modificar</button>
-            </form>
-        </section>
-        <section class="section-canchas" class="eliminar">
-            <form action="">
-                <h2>Eliminar cancha: </h2>
-                <input type="text" name="codCancha1" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <button>Eliminar</button>
+        <section class="main-container">
+            <h1>FUTSAL Villavicencio</h1>
+            <h2>Login</h2>
+            <form action="../../controller/main.php" method="post" class="login-form">   
+                <input type="email" name="username" placeholder="Usuario"id="">
+                <input type="password" name="password" placeholder="Contraseña" id="">
+                <input type="submit" id="btnlogin" >
+                
             </form>
         </section>
     </main>
