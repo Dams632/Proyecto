@@ -1,5 +1,5 @@
 <?php 
-    class Conexion {
+    class Conectar {
         public $host = 'containers-us-west-63.railway.app';
         public $dbname = 'railway';
         public $port = '7471';
@@ -9,7 +9,7 @@
 
         public static function getConnection(){
             try {
-                $conexion= new Conexion();
+                $conexion= new Conectar();
                 $conexion->connect= new PDO("pgsql:host{$conexion->host}; port{$conexion->port}; 
                 dbname{$conexion->dbname}", $conexion->user,$conexion->password);
                 $conexion->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,5 +21,5 @@
             }
         }
     }
-Conexion::getConnection();
+Conectar::getConnection();
 ?>
