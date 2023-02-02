@@ -1,5 +1,5 @@
 <?php
-require_once "config/conexion.php";
+require '/home/dams/Documentos/GitHub/Proyecto/config/conexion.php';
 
 class Canchas extends Conectar{
     public static function mostrarCanchas(){
