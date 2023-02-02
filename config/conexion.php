@@ -2,7 +2,7 @@
     class Conectar {
         public $host = "containers-us-west-63.railway.app";
         public $dbname = 'railway';
-        public $port = 7471;
+        public $port = '7471';
         public $user = 'postgres';
         public $password = 'YgonU3pdXNxE32wD5Zcy';
         public $connect;
