@@ -27,7 +27,7 @@
 <input type="submit" value="Guardar" class="btn"/>
 </form>
 
-<a target="_blank" href="conexion.php">Reggae</a>
+<a target="_blank" href="config/conexion.php">Reggae</a>
 
     </body>
 </html>
