@@ -6,14 +6,14 @@
 
   $username=$_POST['username'];
   $password=$_POST['password'];
-  $query = ("select nombre from administradores where nombre = '".$username."'");
+  $query = ("select nombre from administradores where nombre = '".$username."';");
   $buscando=pg_query($dbconn,$query);
 
  if(pg_num_rows($buscando)==1){
-    echo 'Se encontro el registro';
+    header("location: ../view/html/canchas.html");
  }
  else{
-  echo 'No hay registros con esa informacion'; 
+  echo 'Usted no es un administrador por favor registrese'; 
  }
 
 

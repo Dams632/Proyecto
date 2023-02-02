@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/canchas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../js/objetos.js"></script>
 </head>
 <body>
     <header>
@@ -36,30 +37,39 @@
     <main>
         <h1>Pagina Canchas</h1>
         <section class="section-canchas">
-            <form action="">
+            <form action="../../controller/agregarCanchas.php">
                 <h2>Agregar cancha: </h2>
-                <input type="text" name="agregarCancha" id="">
-                <input type="text" name="capacidadC" id="">
-                <button>Agregar</button>
+                <label for="">Cancha:</label>
+                <input type="text" name="agregarCancha" id="agregarCancha">
+                <label for="Capacidad: "></label>
+                <input type="text" name="agregarCapacidad" id="agregarCapacidad">
+                <input type="submit" name="agregarC" value="Agregar">
             </form>
+            <div id="respuesta"></div>
         </section>
         <section class="section-canchas" class="modificar">
             <form action="">
                 <h2>Consulta/Modifica cancha: </h2>
+                <label for="codCancha">Codigo de cancha</label>
                 <input type="text" name="codCancha" id="">
+                <label for="modificarCancha">Cancha:</label>
                 <input type="text" name="modificarCancha" id="">
-                <input type="text" name="capacidad" id="">
-                <button>Buscar</button>
-                <button>Modificar</button>
+                <label for="capacidad">Capacidad: </label>
+                <input type="text" name="capacidadCancha" id="">
+                <input type="submit" name="buscarC" value="Buscar">
+                <input type="submit" name="modificarC" value="Modificar">
             </form>
         </section>
         <section class="section-canchas" class="eliminar">
             <form action="">
                 <h2>Eliminar cancha: </h2>
+                <label for="codCancha1">Codigo de Cancha:</label>
                 <input type="text" name="codCancha1" id="">
+                <label for="capacidad1">Capacidad: </label>
                 <input type="text" name="" id="">
+                <label for="capacidadE">Capacidad: </label>
                 <input type="text" name="" id="">
-                <button>Eliminar</button>
+                <input type="submit" name="eliminarC" value="Eliminar">
             </form>
         </section>
     </main>
