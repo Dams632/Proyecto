@@ -27,7 +27,7 @@
 <input type="submit" value="Guardar" class="btn"/>
 </form>
 
-<a href="conexion.php">cliuckme</a>
+<a href="https://github.com/Dams632/Proyecto/blob/main/controller/controller.php">cliuckme</a>
 
     </body>
 </html>
