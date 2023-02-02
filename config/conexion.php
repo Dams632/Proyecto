@@ -13,12 +13,12 @@
                 $conexion->connect= new PDO("pgsql:host={$conexion->host}; port={$conexion->port}; 
                 dbname={$conexion->dbname}", $conexion->user,$conexion->password);
                 $conexion->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                //return $conexion->connect;
-                echo "Buena conexion, crack";
+                return $conexion->connect;
+                //echo "Buena conexion, crack";
 
             } catch (PDOException $e) {
                 echo "Error: ". $e->getMessage();
             }
         }
     }
-Conectar::getConnection();
+//Conectar::getConnection();
