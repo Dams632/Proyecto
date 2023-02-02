@@ -27,5 +27,5 @@ class Canchas extends Conectar{
     }
 
 }
-//Canchas::mostrarCanchas();
+Canchas::mostrarCanchas();
 ?>
