@@ -10,7 +10,7 @@ class Canchas extends Conectar{
             $resultado=$stml->fetchAll();
             echo "vas mejor";
             
-            echo '<table>';
+            /*echo '<table>';
             echo '<tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>';
           foreach ($resultado as $row) {
               echo '<tr>';
@@ -19,7 +19,7 @@ class Canchas extends Conectar{
               echo '<td>' . $row['capacidad'] . '</td>';
               echo '</tr>';
             }
-            echo '</table>';
+            echo '</table>';*/
             
         } catch (PDOException $th) {
             echo $th->getMessage();
