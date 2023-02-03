@@ -53,4 +53,4 @@ const app1=new(function(){
 
 app1.listado();
 app.listar_cancha();*/
-alert('Holamundo');
+alert('Hola mundo');
