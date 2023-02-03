@@ -1,50 +1,48 @@
 <?php
 require_once "../config/conexion.php";
-
-class Canchas extends Conectar{
-    public static function mostrarCanchas(){
+class Usuario extends Conectar
+{
+    public static function mostrarUser()
+    {
         try {
-            $sql= "select * from  canchas";
-            $stml= Conectar::getConnection()->prepare($sql);
-            $stml->execute();
-            $resultado=$stml->fetchAll();
-            echo "vas mejor";
-            
+            $sql = "SELECT * FROM usuarios";
+            $stmt = Conectar::getConnection()->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
             echo '<table>';
             echo '<tr><th>Codigo Cancha</th><th>Nombre</th><th>Capacidad</th></tr>';
-            foreach ($resultado as $row) {
+            foreach ($result as $row) {
                 echo '<tr>';
-                echo '<td>' . $row['cod_cancha'] . '</td>';
+                echo '<td>' . $row['id'] . '</td>';
                 echo '<td>' . $row['nombre'] . '</td>';
-                echo '<td>' . $row['capacidad'] . '</td>';
+                echo '<td>' . $row['contrasenia'] . '</td>';
                 echo '</tr>';
                 }
             echo '</table>';
-            
         } catch (PDOException $th) {
             echo $th->getMessage();
         }
     }
-    public static function guardarCancha($data){
+    public static function guardarAdmin($data){
         try {
-            $sql = "INSERT INTO canchas (:nombre,:capacidad) VALUES (:nombre,:capacidad)";
+            $sql = "INSERT INTO usuarios (:nombre,:contrasenia) VALUES (:nombre,:contrasenia)";
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->bindParam(':nombre', $data['nombre']);
-            $stmt->bindParam(':capacidad', $data['capacidad']);
+            $stmt->bindParam(':contrasenia', $data['constrasenia']);
             $stmt->execute();
-            echo 'Se insertaron los datos';
+            echo 'Se insertaron los datos del admin';
             return true;
         }catch(PDOException $th){
             echo $th->getMessage();
         }
     }
-    public static function actualizarCancha($data){
+    public static function actualizarUser($data){
         try{
-            $sql = "UPDATE canchas SET nombre=:nombre, capacidad=:capacidad WHERE cod_cancha=:cod_cancha";
+            $sql = "UPDATE usuarios SET nombre=:nombre, contrasenia=:contrasenia WHERE id=:id";
             $stmt=Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_cancha', $data['cod_cancha']);
+            $stmt->bindParam(':id', $data['id']);
             $stmt->bindParam(':nombre',$data['nombre']);
-            $stmt->bindParam(':capacidad',$data['capacidad']);
+            $stmt->bindParam(':contrasenia',$data['contrasenia']);
             echo 'Se actializaron los datos';
             $stmt->execute();
             return true;
@@ -52,18 +50,19 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function eliminarCancha($data){
+    public static function eliminarAdmin($data){
         try {
-            $sql = "DELETE FROM canchas where cod_cancha=:cod_cancha";
+            $sql = "DELETE FROM usuarios WHERE id=:id";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_cancha', $data['cod_cancha']);
+            $stmt->bindParam(':id', $data['id']);
             $stmt->execute();
             return true;
         }catch(PDOException $th){
             $th->getMessage();
         }
     }
+    
 
 }
-Canchas::mostrarCanchas();
+Admin::mostrarAdmin();
 ?>

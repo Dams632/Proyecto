@@ -12,6 +12,7 @@ header{
     background-color: #00060a;
     
 }
+
 .menu-nav a{
     text-decoration: none;
     color:aliceblue;
@@ -44,6 +45,11 @@ footer{
  color: aliceblue;
 }
 /**Login setion**/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main-container{
     background-color:#5499C7  ;
     display: flex;   
@@ -51,7 +57,7 @@ footer{
     text-align: center;
     align-items: center;
     justify-content: center;
-    width:50vw;
+    width:30vw;
     height: 50%;
     
 }
