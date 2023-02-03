@@ -9,26 +9,29 @@ class Usuario extends Conectar
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
+            /*
             echo '<table>';
-            echo '<tr><th>Codigo Cancha</th><th>Nombre</th><th>Capacidad</th></tr>';
+            echo '<tr><th>User</th><th>Tipo</th><th>Nombre</th></tr>';
             foreach ($result as $row) {
                 echo '<tr>';
-                echo '<td>' . $row['id'] . '</td>';
+                echo '<td>' . $row['user'] . '</td>';
+                echo '<td>' . $row['tipo'] . '</td>';
                 echo '<td>' . $row['nombre'] . '</td>';
-                echo '<td>' . $row['contrasenia'] . '</td>';
                 echo '</tr>';
                 }
             echo '</table>';
+            */
         } catch (PDOException $th) {
             echo $th->getMessage();
         }
     }
     public static function guardarAdmin($data){
         try {
-            $sql = "INSERT INTO usuarios (:nombre,:contrasenia) VALUES (:nombre,:contrasenia)";
+            $sql = "INSERT INTO usuarios (user,tipo,nombre) VALUES (:user,:tipo,:nombre)";
             $stmt = Conectar::getConnection()->prepare($sql);
+            $stmt->bindParam(':user', $data['user']);
+            $stmt->bindParam(':tipo', $data['tipo']);
             $stmt->bindParam(':nombre', $data['nombre']);
-            $stmt->bindParam(':contrasenia', $data['constrasenia']);
             $stmt->execute();
             echo 'Se insertaron los datos del admin';
             return true;
@@ -38,11 +41,11 @@ class Usuario extends Conectar
     }
     public static function actualizarUser($data){
         try{
-            $sql = "UPDATE usuarios SET nombre=:nombre, contrasenia=:contrasenia WHERE id=:id";
+            $sql = "UPDATE usuarios SET tipo=:tipo, nombre=:nombre WHERE user=:user";
             $stmt=Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':id', $data['id']);
-            $stmt->bindParam(':nombre',$data['nombre']);
-            $stmt->bindParam(':contrasenia',$data['contrasenia']);
+            $stmt->bindParam(':user', $data['user']);
+            $stmt->bindParam(':tipo',$data['tipo']);
+            $stmt->bindParam(':nombre',$data['nombre']);  
             echo 'Se actializaron los datos';
             $stmt->execute();
             return true;
@@ -52,9 +55,9 @@ class Usuario extends Conectar
     }
     public static function eliminarAdmin($data){
         try {
-            $sql = "DELETE FROM usuarios WHERE id=:id";
+            $sql = "DELETE FROM usuarios WHERE user=:user";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':id', $data['id']);
+            $stmt->bindParam(':user', $data['user']);
             $stmt->execute();
             return true;
         }catch(PDOException $th){
@@ -64,5 +67,5 @@ class Usuario extends Conectar
     
 
 }
-Admin::mostrarAdmin();
+Usuario::mostrarUser();
 ?>
