@@ -8,18 +8,7 @@ class Canchas extends Conectar{
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();
-            echo "vas mejor";
-            
-            echo '<table>';
-            echo '<tr><th>Codigo Cancha</th><th>Nombre</th><th>Capacidad</th></tr>';
-            foreach ($resultado as $row) {
-                echo '<tr>';
-                echo '<td>' . $row['cod_cancha'] . '</td>';
-                echo '<td>' . $row['nombre'] . '</td>';
-                echo '<td>' . $row['capacidad'] . '</td>';
-                echo '</tr>';
-                }
-            echo '</table>';
+            //echo "vas mejor";
             
         } catch (PDOException $th) {
             echo $th->getMessage();
