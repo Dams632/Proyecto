@@ -11,7 +11,6 @@
                 <th>cod_cancha</th>
                 <th>nombre</th>
                 <th>capacidad</th>
-                <th>Opciones</th>
               </tr>
             </thead>
             <tbody id="tbody"></tbody>

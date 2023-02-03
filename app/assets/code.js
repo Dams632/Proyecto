@@ -25,5 +25,5 @@ const app = new (function () {
         })
         .catch((error) => console.log(error));
     }
-})();
+});
 app.listar_cancha();
