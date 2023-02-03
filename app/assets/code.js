@@ -1,4 +1,4 @@
-const app = new (function () {
+/*const app = new (function () {
     this.tbody = document.getElementById("tbody");
     this.cod_cancha = document.getElementById("cod_cancha");
     this.nombre = document.getElementById("nombre");
@@ -26,4 +26,5 @@ const app = new (function () {
         .catch((error) => console.log(error));
     }
 });
-app.listar_cancha();
+app.listar_cancha();*/
+alert("Hola mundo");
