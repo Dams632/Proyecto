@@ -4,7 +4,7 @@ const app = new (function () {
     this.nombre = document.getElementById("nombre");
     this.capacidad = document.getElementById("capacidad");
 
-    this.listado = () => {
+    this.listar_cancha = () => {
       fetch("../controllers/listar_cancha.php")
         .then((res) => res.json())
         .then((data) => {
@@ -26,3 +26,4 @@ const app = new (function () {
         .catch((error) => console.log(error));
     }
 })();
+app.listar_cancha();
