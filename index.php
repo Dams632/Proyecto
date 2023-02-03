@@ -8,15 +8,15 @@
   <table class="table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Nombres</th>
-                <th>Capacidad</th>
+                <th>cod_cancha</th>
+                <th>nombre</th>
+                <th>capacidad</th>
                 <th>Opciones</th>
               </tr>
             </thead>
             <tbody id="tbody"></tbody>
           </table>
-          
+
           <script src="../assets/code.js"></script>
   </body>
 </html>
