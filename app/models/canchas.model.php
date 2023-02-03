@@ -8,6 +8,7 @@ class Canchas extends Conectar{
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();
+            return $resultado;
             //echo "vas mejor";
             
         } catch (PDOException $th) {
