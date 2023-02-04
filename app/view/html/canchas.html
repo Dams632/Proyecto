@@ -39,37 +39,54 @@
         <section class="section-canchas">
             <form action="../../controller/agregarCanchas.php">
                 <h2>Agregar cancha: </h2>
-                <label for="">Cancha:</label>
-                <input type="text" name="agregarCancha" id="agregarCancha">
-                <label for="Capacidad: "></label>
-                <input type="text" name="agregarCapacidad" id="agregarCapacidad">
-                <input type="submit" name="agregarC" value="Agregar">
+                <div class="division-cancha">
+                    <label for="">Cancha:</label>
+                    <input type="text" name="agregarCancha" id="agregarCancha">
+                </div>
+                <div class="division-cancha">
+                    <label for="Capacidad: ">Capacidad</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <input class="button" type="submit" name="agregarC" value="Agregar">
+                </div>
             </form>
-            <div id="respuesta"></div>
         </section>
         <section class="section-canchas" class="modificar">
             <form action="">
                 <h2>Consulta/Modifica cancha: </h2>
-                <label for="codCancha">Codigo de cancha</label>
-                <input type="text" name="codCancha" id="">
-                <label for="modificarCancha">Cancha:</label>
-                <input type="text" name="modificarCancha" id="">
-                <label for="capacidad">Capacidad: </label>
-                <input type="text" name="capacidadCancha" id="">
-                <input type="submit" name="buscarC" value="Buscar">
-                <input type="submit" name="modificarC" value="Modificar">
+                <div class="division-cancha">
+                    <label for="codCancha">Codigo de cancha</label>
+                    <input type="text" name="codCancha" id="">
+                </div>
+                <div class="division-cancha">
+                    <label for="modificarCancha">Cancha:</label>
+                    <input type="text" name="modificarCancha" id="">
+                </div>
+                <div class="division-cancha">
+                    <label for="capacidad">Capacidad: </label>
+                    <input type="text" name="capacidadCancha" id="">
+                </div>
+                <div class="division-cancha">
+                    <input class="button" type="submit" name="buscarC" value="Buscar">
+                    <input class="button" type="submit" name="modificarC" value="Modificar">
+                </div>
             </form>
         </section>
         <section class="section-canchas" class="eliminar">
             <form action="">
                 <h2>Eliminar cancha: </h2>
-                <label for="codCancha1">Codigo de Cancha:</label>
-                <input type="text" name="codCancha1" id="">
-                <label for="capacidad1">Capacidad: </label>
-                <input type="text" name="" id="">
-                <label for="capacidadE">Capacidad: </label>
-                <input type="text" name="" id="">
-                <input type="submit" name="eliminarC" value="Eliminar">
+                <div class="division-cancha">
+                    <label for="codCancha1">Codigo de Cancha:</label>
+                    <input type="text" name="codCancha1" id="">
+                </div>
+                <div class="division-cancha">
+                    <label for="capacidad1">Capacidad: </label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="division-cancha">
+                    <input class="button" type="submit" name="eliminarC" value="Eliminar">
+                </div>
             </form>
         </section>
     </main>

@@ -2,13 +2,14 @@
 require_once "../config/conexion.php";
 class Usuario extends Conectar
 {
-    public static function mostrarUser()
+    public static function mostrarUsuarios()
     {
         try {
             $sql = "SELECT * FROM usuarios";
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->execute();
             $result = $stmt->fetchAll();
+            return $result;
             /*
             echo '<table>';
             echo '<tr><th>User</th><th>Tipo</th><th>Nombre</th></tr>';
@@ -25,7 +26,7 @@ class Usuario extends Conectar
             echo $th->getMessage();
         }
     }
-    public static function guardarAdmin($data){
+    public static function guardarUsuarios($data){
         try {
             $sql = "INSERT INTO usuarios (user,tipo,nombre) VALUES (:user,:tipo,:nombre)";
             $stmt = Conectar::getConnection()->prepare($sql);
@@ -39,7 +40,7 @@ class Usuario extends Conectar
             echo $th->getMessage();
         }
     }
-    public static function actualizarUser($data){
+    public static function actualizarUsuarios($data){
         try{
             $sql = "UPDATE usuarios SET tipo=:tipo, nombre=:nombre WHERE user=:user";
             $stmt=Conectar::getConnection()->prepare($sql);
@@ -53,7 +54,7 @@ class Usuario extends Conectar
             echo $th->getMessage();
         }
     }
-    public static function eliminarAdmin($data){
+    public static function eliminarUsuarios($data){
         try {
             $sql = "DELETE FROM usuarios WHERE user=:user";
             $stmt = Conectar::getConnection()->prepare($sql);
@@ -67,5 +68,5 @@ class Usuario extends Conectar
     
 
 }
-Usuario::mostrarUser();
+Usuario::mostrarUsuarios();
 ?>

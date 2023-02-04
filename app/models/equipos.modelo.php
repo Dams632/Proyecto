@@ -2,9 +2,9 @@
 require_once "../config/conexion.php";
 
 class Canchas extends Conectar{
-    public static function mostrarCanchas(){
+    public static function mostrarEquipos(){
         try {
-            $sql= "select * from  canchas";
+            $sql= "select * from  equipos";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();
@@ -15,12 +15,13 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function guardarCancha($data){
+    public static function guardarEquipos($data){
         try {
-            $sql = "INSERT INTO canchas (nombre,capacidad) VALUES (:nombre,:capacidad)";
+            $sql = "INSERT INTO equipos (nombre,cod_ciudad,id_tecnico) VALUES (:nombre,:cod_ciudad,:id_tecnico)";
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->bindParam(':nombre', $data['nombre']);
-            $stmt->bindParam(':capacidad', $data['capacidad']);
+            $stmt->bindParam(':cod_ciudad', $data['cod_ciudad']);
+            $stmt->bindParam(':id_tecnico', $data['id_tecnico']);
             $stmt->execute();
             echo 'Se insertaron los datos';
             return true;
@@ -28,13 +29,14 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function actualizarCancha($data){
+    public static function actualizarEquipos($data){
         try{
-            $sql = "UPDATE canchas SET nombre=:nombre, capacidad=:capacidad WHERE cod_cancha=:cod_cancha";
+            $sql = "UPDATE equipos SET nombre=:nombre, cod_ciudad=:cod_ciudad, id_tecnico=:id_tecnico WHERE cod_equipo=:cod_equipo";
             $stmt=Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_cancha', $data['cod_cancha']);
+            $stmt->bindParam(':cod_equipo', $data['cod_equipo']);
             $stmt->bindParam(':nombre',$data['nombre']);
-            $stmt->bindParam(':capacidad',$data['capacidad']);
+            $stmt->bindParam(':cod_ciudad',$data['cod_ciudad']);
+            $stmt->bindParam(':id_tecnico',$data['id_tecnico']);
             echo 'Se actializaron los datos';
             $stmt->execute();
             return true;
@@ -42,11 +44,11 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function eliminarCancha($data){
+    public static function eliminarEquipos($data){
         try {
-            $sql = "DELETE FROM canchas where cod_cancha=:cod_cancha";
+            $sql = "DELETE FROM equipos where cod_equipo=:cod_equipo";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_cancha', $data['cod_cancha']);
+            $stmt->bindParam(':cod_equipo', $data['cod_equipo']);
             $stmt->execute();
             return true;
         }catch(PDOException $th){
@@ -55,5 +57,5 @@ class Canchas extends Conectar{
     }
 
 }
-//Canchas::mostrarCanchas();
+//Canchas::mostrarEquipos();
 ?>
