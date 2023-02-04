@@ -1,3 +1,3 @@
 <?php
-header("Llocation: contorller/crudControlador.php");
+header("Location: ../app/controller/crudUsuarios.php");
 ?>

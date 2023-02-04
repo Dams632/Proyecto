@@ -13,8 +13,9 @@
             <form action="../../controller/insertarUsuarios.php" method="POST">
                 <label for="">Usuario: </label>
                 <input type="email" name="username">
-                <label for="" name="nombre">Nombre: </label>
-                <input type="text">
+                <label for="">Nombre: </label>
+                <input type="text" name="nombre">
+                <input type="text" name="tipo">
                 <label for="">Tipo: </label>
                 <input type="text">
                 <input type="submit" value="Agregar" > 

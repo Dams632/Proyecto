@@ -10,8 +10,8 @@
 <body>
     <header></header>
     <main>
+        <a href="../view/html/insertarUsuario.php"><button>Agregar</button></a>
         <table>
-            <a href="../../controller/insertarUsuarios.php"><button>Agregar</button></a>
             <thead></thead>
             <tr>
                 <th>USER</th>
@@ -25,8 +25,8 @@
                 <td><?php echo$registro['user'];?></td>
                 <td><?php echo$registro['tipo'];?></td>
                 <td><?php echo$registro['nombre'];?></td>
-                <td><a href="eliminar.php?txtcodigo=<?php echo $registro['user'];?>" role="button">Eliminar</a>
-            |<a  href="../update/meseros.php?txtcodigo= <?php echo $registro['user'];?>" role="button">Editar</a></td>
+                <td><a href="eliminar.php?txtcodigo=<?php echo $registro['user'];?>"><button>Eliminar</button></a>
+            <a  href="../update/meseros.php?txtcodigo= <?php echo $registro['user'];?>"><button>Editar</button></a></td>
           <?php } ?>
                </tr>
                 
