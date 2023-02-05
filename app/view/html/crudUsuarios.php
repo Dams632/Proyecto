@@ -30,7 +30,8 @@
                 <th>NOMBRE</th>
             </tr>
             <tbody>
-               <?php 
+               <?php
+               include_once("./app/controller/crudUsuarios.php");
                foreach($record as $registro){?>
                <tr>
                 <td><?php echo$registro['user'];?></td>

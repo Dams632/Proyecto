@@ -1,11 +1,11 @@
-/*const app = new (function () {
-    this.tbody = document.getElementById("tbody");
+const app = new (function () {
+    this.tbody = document.getElementById("mostrar");
     this.cod_cancha = document.getElementById("cod_cancha");
     this.nombre = document.getElementById("nombre");
     this.capacidad = document.getElementById("capacidad");
 
     this.listar_cancha = () => {
-      fetch("../controllers/listar_cancha.php")
+      fetch("../controller/listar_cancha.php")
         .then((res) => res.json())
         .then((data) => {
           this.tbody.innerHTML = "";
@@ -26,7 +26,7 @@
         .catch((error) => console.log(error));
     }
 });
-const app1=new(function(){
+/*const app1=new(function(){
     this.tbody=document.getElementById("tbody");
     this.listado=()=>{
         fetch("../controller/listarUsuario.php")
@@ -49,8 +49,5 @@ const app1=new(function(){
         })
         .catch((error)=>condole.log(error));
     }
-})();
-
-app1.listado();
-app.listar_cancha();*/
-alert('Hola mundo');
+})();*/
+app.listado();
