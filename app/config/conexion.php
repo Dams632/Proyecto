@@ -14,7 +14,7 @@
                 dbname={$conexion->dbname}", $conexion->user,$conexion->password);
                 $conexion->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $conexion->connect;
-                //echo "Buena conexion, crack";
+               // echo "Buena conexion, crack";
 
             } catch (PDOException $e) {
                 echo "Error: ". $e->getMessage();
