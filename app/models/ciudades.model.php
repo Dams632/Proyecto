@@ -15,11 +15,12 @@ class Ciudades extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function guardarCiudad($data){
+    public static function guardarCiudad($cod_ciudad,$nombre){
         try {
-            $sql = "INSERT INTO ciudades (nombre) VALUES (:nombre)";
+            $sql = "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (:cod_ciudad,:nombre)";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':nombre', $data['nombre']);
+            $stmt->bindParam(':cod_ciudad', $cod_cancha);
+            $stmt->bindParam(':nombre', $nombre);
             $stmt->execute();
             echo 'Se insertaron los datos';
             return true;
@@ -27,13 +28,13 @@ class Ciudades extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function actualizarCiudades($data){
+    public static function actualizarCiudad($cod_ciudad,$nombre){
         try{
-            $sql = "UPDATE canchas SET nombre=:nombre WHERE cod_ciudad=:cod_ciudad";
+            $sql = "UPDATE ciudades SET nombre=:nombre WHERE cod_ciudad=:cod_ciudad";
             $stmt=Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_ciudad', $data['cod_ciudad']);
-            $stmt->bindParam(':nombre',$data['nombre']);
-            echo 'Se actializaron los datos';
+            $stmt->bindParam(':cod_ciudad', $cod_ciudad);
+            $stmt->bindParam(':nombre', $nombre);
+            echo 'Se actualizaron los datos';
             $stmt->execute();
             return true;
         }catch(PDOException $th){
@@ -44,7 +45,7 @@ class Ciudades extends Conectar{
         try {
             $sql = "DELETE FROM ciudades where cod_ciudad=:cod_ciudad";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_ciudad', $data['cod_ciudad']);
+            $stmt->bindParam(':cod_ciudad', $data);
             $stmt->execute();
             return true;
         }catch(PDOException $th){

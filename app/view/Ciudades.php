@@ -12,10 +12,9 @@
      <div class="row">                   
         <div class="col-md-3">
             <h1>Ingrese datos</h1>
-              <form action="../controller/agregarCanchas.php"  method="POST">
-                    <input type="text" class="form-control mb-3" name="cod_cancha" placeholder="codigo de cancha">
-                    <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de cancha">
-                    <input type="text" class="form-control mb-3" name="capacidad" placeholder="Capacidad">
+              <form action="../controller/agregarCiudad.php"  method="POST">
+                    <input type="text" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de ciudad">
+                    <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de ciudad">
                     <input type="submit" class="btn btn-primary">
               </form>
         </div>
@@ -25,9 +24,8 @@
             <thead class="table-success table-striped" >
               <tr>
                 <tr>
-                  <th>Codigo de Cancha</th>
+                  <th>Codigo de Ciudad</th>
                   <th>Nombre</th>
-                  <th>Capacidad</th>
                   <th>Acción</th>
                 </tr>
                 <th></th>
@@ -37,23 +35,21 @@
 
             <tbody>
               <?php
-              include_once('../controller/listar_cancha.php');
+              include_once('../controller/listar_ciudades.php');
               foreach($recordss as $registro){  
               ?> 
               <tr class="">
-                <td scope="row"><?php echo $registro['cod_cancha'];?></td>
+                <td scope="row"><?php echo $registro[0];?></td>
                 <td><?php echo $registro[1];?></td>
-                <td><?php echo $registro[2];?></td>
-                <td><a href="../controller/eliminar_cancha.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
+                <td><a href="../controller/eliminarCiudad.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
                 <td><button>
-                <form action="../controller/actualizarCancha.php"  method="POST"> 
+                <form action="../controller/actualizarCiudad.php"  method="POST"> 
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
-                      <input type="text" class="form-control mb-3" name="cod_cancha" placeholder="codigo de cancha" value="<?php echo $registro[0]?>">
+                      <input type="text" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de cancha" value="<?php echo $registro[0]?>">
                       <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de cancha" value="<?php echo $registro[1]?>">
-                      <input type="text" class="form-control mb-3" name="capacidad" placeholder="Capacidad" value="<?php echo $registro[2]?>">
-                      <a href="../controller/actualizarCancha.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>
+                      <a href="../controller/actualizarCiudad.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>
                    
                     
                  </div>
