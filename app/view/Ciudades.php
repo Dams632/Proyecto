@@ -28,8 +28,6 @@
                   <th>Nombre</th>
                   <th>Acción</th>
                 </tr>
-                <th></th>
-                <th></th>
               </tr>
             </thead>
 
@@ -47,11 +45,9 @@
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
-                      <input type="text" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de cancha" value="<?php echo $registro[0]?>">
-                      <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de cancha" value="<?php echo $registro[1]?>">
-                      <a href="../controller/actualizarCiudad.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>
-                   
-                    
+                      <input type="text" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de ciudad" value="<?php echo $registro[0]?>">
+                      <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de ciudad" value="<?php echo $registro[1]?>">
+                      <a href="../controller/actualizarCiudad.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
                  </div>
                 </details>
                 </form> 

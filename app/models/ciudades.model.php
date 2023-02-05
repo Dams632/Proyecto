@@ -19,7 +19,7 @@ class Ciudades extends Conectar{
         try {
             $sql = "INSERT INTO ciudades (cod_ciudad,nombre) VALUES (:cod_ciudad,:nombre)";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_ciudad', $cod_cancha);
+            $stmt->bindParam(':cod_ciudad', $cod_ciudad);
             $stmt->bindParam(':nombre', $nombre);
             $stmt->execute();
             echo 'Se insertaron los datos';
