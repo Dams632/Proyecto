@@ -54,5 +54,4 @@ class Ciudades extends Conectar{
     }
 
 }
-//Canchas::mostrarCanchas();
 ?>
