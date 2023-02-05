@@ -10,7 +10,18 @@
 <body>
     <header></header>
     <main>
-        <a href="../view/html/insertarUsuario.php"><button>Agregar</button></a>
+        <form action="insertarUsuarios.php" method="POST">
+                <label for="">Usuario: </label>
+                <input type="email" name="user">
+                <label for="">Nombre: </label>
+                <input type="text" name="nombre">     
+                <label for="">Tipo: </label>
+                <input type="text" name="tipo">
+                <label for="">Contraseña: </label>
+                <input type="password" name="contrasenia">
+                <input type="submit" value="Agregar" > 
+            </form>
+        <!-- <a href="../view/html/insertarUsuario.php"><button>Agregar</button></a> -->
         <table>
             <thead></thead>
             <tr>
@@ -25,8 +36,9 @@
                 <td><?php echo$registro['user'];?></td>
                 <td><?php echo$registro['tipo'];?></td>
                 <td><?php echo$registro['nombre'];?></td>
-                <td><a href="eliminar.php?txtcodigo=<?php echo $registro['user'];?>"><button>Eliminar</button></a>
-            <a  href="../update/meseros.php?txtcodigo= <?php echo $registro['user'];?>"><button>Editar</button></a></td>
+                <td><a href="eliminarUsuario.php?userid=<?php echo $registro['user'];?>"><button>Eliminar</button></a>
+            <a  href="editarUsuario.php?userid=<?php echo $registro['user'];?>"><button>Editar</button></a> 
+        </td>
           <?php } ?>
                </tr>
                 
