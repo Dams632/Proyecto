@@ -1,6 +1,6 @@
 <?php
-require_once '../models/encuentros.model.php';
-$newobject = new Encuentros;
-$record = $newobject->mostrarEncuentros();
-require_once '../view/html/encuentros.php';
+require_once '../models/goles.model.php';
+$newobject = new Goles;
+$record = $newobject->mostrarGoles();
+require_once '../view/html/goles.php';
 ?>

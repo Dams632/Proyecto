@@ -13,22 +13,25 @@
     <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a  href="#logo">Home</a>
+                    <a  href="/app/view/canchas.php ">Canchas</a>
                     </li>
                 <li class="menu-nav">
-                    <a href="#about">About</a>
+                    <a href="">Encuentros</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#portfolio">Goles</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#services">Services</a>
+                    <a href="#services">Ciudades</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#gallery">Gallery</a>
+                    <a href="#gallery">Jugadores</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">Tecmnicos</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="#contact">Equipos</a>
                 </li>
             </ul>
         </nav>
@@ -67,26 +70,11 @@
             </td>
             <?php } ?>
                 </tr>
-                    
                 </tbody>
             </table>
         </section>
     </main>
     <footer>
-    <ul class="media-bar">
-            <li class="media-bar-styles">
-                <a><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li class="media-bar-styles">
-                <a><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li class="media-bar-styles">
-                <a><i class="fa-brands fa-pinterest"></i></a>
-            </li>
-            <li class="media-bar-styles">
-                <a><i class="fa-brands fa-tiktok"></i></a>
-            </li>
-        </ul>
     </footer>
 </body>
 </html>

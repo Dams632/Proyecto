@@ -1,3 +1,3 @@
 <?php
-header("Location: ../app/controller/listarEncuentros.php");
+header("Location: ../app/controller/crudUsuarios.php");
 ?>
