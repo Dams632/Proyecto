@@ -34,16 +34,16 @@
         </nav>
     </header>
     <main>
-        <form action="editarUsuario.php" method="POST">
+        <form action="" method="POST">
             <label for="">Usuario</label>
-            <input type="text" name="code" value="<?php echo $var['user'];?>">
+            <input type="text" name="user" value="<?php echo $var['user'];?>">
             <label for="">Tipo</label>
             <input type="text" name="tipo" value="<?php echo $var['tipo'];?>">
             <label for="">Contraseña</label>
             <input type="password" name="contrasenia" value="<?php echo $var['password'];?>">
             <label for="">Nombre</label>
             <input type="text" name="user" value="<?php echo $var['nombre'];?>">
-            <a><button>Editar</button></a>
+            <a href="editarUsuario.php?userid=<?php echo $registro['user'];?>"><button>Editar</button></a>
         </form>
 
     </main>

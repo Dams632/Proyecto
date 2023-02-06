@@ -16,7 +16,7 @@
                     <a  href="/app/view/canchas.php ">Canchas</a>
                     </li>
                 <li class="menu-nav">
-                    <a href="">Encuentros</a>
+                    <a href="../">Encuentros</a>
                 </li>
                 <li class="menu-nav">
                     <a href="#portfolio">Goles</a>
