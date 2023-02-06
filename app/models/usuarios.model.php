@@ -53,7 +53,7 @@ class Usuario extends Conectar
             $stmt->bindParam(':user', $data['user']);
             $stmt->bindParam(':tipo',$data['tipo']);
             $stmt->bindParam(':nombre',$data['nombre']);  
-            echo 'Se actializaron los datos';
+            echo 'Se actualizaron los datos';
             $stmt->execute();
             return true;
         }catch(PDOException $th){
@@ -73,7 +73,6 @@ class Usuario extends Conectar
     }
     public static function buscarDato($data){
         try{
-            print_r($data);
             $sql="SELECT * FROM usuarios WHERE \"user\"=:user";
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->bindParam(':user', $data);

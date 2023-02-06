@@ -1,5 +1,4 @@
 <?php
-    echo 'Todo bien';
     require_once '../models/usuarios.model.php';
     $newobject = new Usuario;
     $newobject->guardarUsuarios($_POST);

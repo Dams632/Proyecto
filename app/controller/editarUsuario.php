@@ -4,7 +4,6 @@
     $editando = $_GET['userid'];
 if (!$_POST)
     $var=$newobjet->buscarDato($editando);
-    print_r($var);
     require_once "../view/html/editaruser.php";
 if ($_POST)
     $record=$newobjet->actualizarUsuarios($_POST);

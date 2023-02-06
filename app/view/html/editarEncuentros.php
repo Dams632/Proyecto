@@ -34,15 +34,23 @@
         </nav>
     </header>
     <main>
-        <form action="editarUsuario.php" method="POST">
-            <label for="">Usuario</label>
-            <input type="text" name="code" value="<?php echo $var['user'];?>">
-            <label for="">Tipo</label>
-            <input type="text" name="tipo" value="<?php echo $var['tipo'];?>">
-            <label for="">Contraseña</label>
-            <input type="password" name="contrasenia" value="<?php echo $var['password'];?>">
-            <label for="">Nombre</label>
-            <input type="text" name="user" value="<?php echo $var['nombre'];?>">
+        <form action="editarEncuentro.php" method="POST">
+            <label for="">Codigo de encuentro: </label>
+            <input type="text" name="cod_encuentro" value="<?php echo $var['cod_encuentro'];?>">
+            <label for="">Codigo el local: </label>
+            <input type="text" name="cod_local" value="<?php echo $var['cod_local'];?>">
+            <label for="">Cantidad de goles local</label>
+            <input type="text" name="cant_goles_local" value="<?php echo $var['cant_goles_local'];?>">
+            <label for="">Codigo del visitante</label>
+            <input type="text" name="cod_visitante" value="<?php echo $var['cod_visitante'];?>">
+            <label for="">Cantidad de goles vistante</label>
+            <input type="text" name="cant_goles_visitante" value="<?php echo $var['cant_goles_visitante'];?>">
+            <label for="">Codigo de canchas</label>
+            <input type="text" name="cod_cancha" value="<?php echo $var['cod_cancha'];?>">
+            <label for="">Fecha</label>
+            <input type="text" name="fecha" value="<?php echo $var['fecha'];?>">
+            <label for="">Hora</label>
+            <input type="text" name="hora" value="<?php echo $var['hora'];?>">
             <a><button>Editar</button></a>
         </form>
 
