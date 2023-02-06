@@ -5,7 +5,7 @@ require_once "../models/equipos.modelo.php";
 class Jugadores extends Conectar{
     public static function mostrarJugadores(){
         try {
-            $sql= "select * from  jugadores";
+            $sql= "select * from  jugadores ORDER BY cod_equipo";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
            // $stml->bindParam(':cod_equipo', $cod_equipo);
