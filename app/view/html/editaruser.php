@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../view/css/general.css">
     <link rel="stylesheet" href="../view/css/editarUsuario.css">
     <title>Document</title>
-</head>
+</head> 
 <body>
     <header>
     <nav>

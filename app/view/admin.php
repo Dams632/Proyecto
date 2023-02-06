@@ -2,17 +2,33 @@
 <html>
     <head>
         <title>ADMINISTRADOR</title>
+        <link rel="stylesheet" href="../view/css/general.css">
     </head>
     <body>
-        <div>
-            <a href="../view/Ciudades.php">Administar Ciudades</a>
-        </div>
-        <div>
-            <a href="../view/canchas.php">Administar Canchas</a>
-        </div>    
-        <div>
-            <a href="../view/tecnico.php">Administar Director Tecnico</a>
-        </div>
+    <header>
+        <nav>
+            <ul class="bar-nav">
+                <li class="menu-nav">
+                    <a href="../view/Ciudades.php">Ciudades</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="../view/canchas.php">Canchas</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="../view/tecnico.php">Tecnicos</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="../view/html/encuentros.php">Encuentros</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="../view/equipos.php">Equipos</a>
+                </li>
+                <li class="menu-nav">
+                    <a href="../view/jugadores.php">Jugadores</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
         
     </body>
 </html>
