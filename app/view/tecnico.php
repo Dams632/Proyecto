@@ -38,7 +38,7 @@
             <tbody>
               <?php
               include_once('../controller/listarTecnicos.php');
-              foreach($recordss as $registro){  
+              foreach($record as $registro){  
               ?> 
               <tr class="">
                 <td scope="row"><?php echo $registro[0];?></td>
@@ -51,7 +51,7 @@
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
-                      <input type="text" class="form-control mb-3" name="id_tecnico" placeholder="Numero de identificacion" value="<?php echo $registro[0]?>">
+                      <input type="hidden" class="form-control mb-3" name="id_tecnico" placeholder="Numero de identificacion" value="<?php echo $registro[0]?>">
                       <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $registro[1]?>">
                       <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $registro[2]?>">
                       <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" value="<?php echo $registro[3]?>">

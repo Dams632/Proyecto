@@ -15,6 +15,16 @@ class Tecnicos extends Conectar{
             echo $th->getMessage();
         }
     }
+    public static function mostrarNombre($data){
+        try{
+            $sql="SELECT nombres from director_tecnico where id_tecnico=:id_tecnico";
+            $stml= Conectar::getConnection()->prepare($sql);
+            $stml->bindParam(':id_tecnico',$data);
+            $stml->execute();
+            $resultado = $stml->fetch();
+            return $resultado;
+        }catch(PDOException $th){}
+    }
     public static function guardarTecnico($id_tecnico,$nombres, $apellidos,$edad){
         try {
             $sql = "INSERT INTO director_tecnico (id_tecnico, nombres, apellidos, edad) VALUES (:id_tecnico, :nombres, :apellidos, :edad)";

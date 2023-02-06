@@ -1,10 +1,23 @@
 <?php
 require_once "../config/conexion.php";
+require_once "../models/tecnicos.model.php";
+class Equipos extends Conectar{
+    public static function listarTecnicos(){
+        try{
+            $sql= "SELECT t.nombres,t.apellidos from director_tecnico t INNER JOIN equipos e on t.id_tecnico=e.id_tecnico";
+            $stml= Conectar::getConnection()->prepare($sql);
+            $stml->execute();
+            $resultado = $stml->fetchAll();
+            return $resultado;
 
-class Canchas extends Conectar{
+        }catch(PDOException $th){
+            echo $th->getMessage();
+        }
+
+    }
     public static function mostrarEquipos(){
         try {
-            $sql= "select * from  equipos";
+            $sql= "SELECT * from  equipos";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();
@@ -15,13 +28,14 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function guardarEquipos($data){
+    public static function guardarEquipos($cod_equipo,$nombre,$cod_ciudad,$id_tecnico){
         try {
-            $sql = "INSERT INTO equipos (nombre,cod_ciudad,id_tecnico) VALUES (:nombre,:cod_ciudad,:id_tecnico)";
+            $sql = "INSERT INTO equipos (cod_equipo,nombre,cod_ciudad,id_tecnico) VALUES (:cod_equipo,:nombre,:cod_ciudad,:id_tecnico)";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':nombre', $data['nombre']);
-            $stmt->bindParam(':cod_ciudad', $data['cod_ciudad']);
-            $stmt->bindParam(':id_tecnico', $data['id_tecnico']);
+            $stmt->bindParam(':cod_equipo', $cod_equipo);
+            $stmt->bindParam(':nombre', $nombre);
+            $stmt->bindParam(':cod_ciudad', $cod_ciudad);
+            $stmt->bindParam(':id_tecnico', $id_tecnico);
             $stmt->execute();
             echo 'Se insertaron los datos';
             return true;
@@ -29,14 +43,14 @@ class Canchas extends Conectar{
             echo $th->getMessage();
         }
     }
-    public static function actualizarEquipos($data){
+    public static function actualizarEquipos($cod_equipo,$nombre,$cod_ciudad,$id_tecnico){
         try{
             $sql = "UPDATE equipos SET nombre=:nombre, cod_ciudad=:cod_ciudad, id_tecnico=:id_tecnico WHERE cod_equipo=:cod_equipo";
             $stmt=Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_equipo', $data['cod_equipo']);
-            $stmt->bindParam(':nombre',$data['nombre']);
-            $stmt->bindParam(':cod_ciudad',$data['cod_ciudad']);
-            $stmt->bindParam(':id_tecnico',$data['id_tecnico']);
+            $stmt->bindParam(':cod_equipo', $cod_equipo);
+            $stmt->bindParam(':nombre',$nombre);
+            $stmt->bindParam(':cod_ciudad',$cod_ciudad);
+            $stmt->bindParam(':id_tecnico',$id_tecnico);
             echo 'Se actializaron los datos';
             $stmt->execute();
             return true;
@@ -48,7 +62,7 @@ class Canchas extends Conectar{
         try {
             $sql = "DELETE FROM equipos where cod_equipo=:cod_equipo";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_equipo', $data['cod_equipo']);
+            $stmt->bindParam(':cod_equipo', $data);
             $stmt->execute();
             return true;
         }catch(PDOException $th){

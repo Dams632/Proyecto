@@ -34,7 +34,7 @@
             <tbody>
               <?php
               include_once('../controller/listar_ciudades.php');
-              foreach($recordss as $registro){  
+              foreach($recordss_C as $registro){  
               ?> 
               <tr class="">
                 <td scope="row"><?php echo $registro[0];?></td>
@@ -45,7 +45,7 @@
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
-                      <input type="text" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de ciudad" value="<?php echo $registro[0]?>">
+                      <input type="hidden" class="form-control mb-3" name="cod_ciudad" placeholder="codigo de ciudad" value="<?php echo $registro[0]?>">
                       <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de ciudad" value="<?php echo $registro[1]?>">
                       <a href="../controller/actualizarCiudad.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
                  </div>

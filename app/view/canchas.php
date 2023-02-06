@@ -50,12 +50,10 @@
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
-                      <input type="text" class="form-control mb-3" name="cod_cancha" placeholder="codigo de cancha" value="<?php echo $registro[0]?>">
+                      <input type="hidden" class="form-control mb-3" name="cod_cancha" placeholder="codigo de cancha" value="<?php echo $registro[0]?>">
                       <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre de cancha" value="<?php echo $registro[1]?>">
                       <input type="text" class="form-control mb-3" name="capacidad" placeholder="Capacidad" value="<?php echo $registro[2]?>">
-                      <a href="../controller/actualizarCancha.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>
-                   
-                    
+                      <a href="../controller/actualizarCancha.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>  
                  </div>
                 </details>
                 </form> 
