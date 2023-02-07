@@ -5,6 +5,7 @@ class Usuario extends Conectar
     public static function mostrarUsuarios()
     {
         try {
+            
             $sql = "SELECT * FROM usuarios";
             $stmt = Conectar::getConnection()->prepare($sql);
             $stmt->execute();
@@ -48,7 +49,8 @@ class Usuario extends Conectar
     }
     public static function actualizarUsuarios($data){
         try{
-            $sql = "UPDATE usuarios SET tipo=:tipo, nombre=:nombre WHERE user=:user";
+            $sql = "UPDATE usuarios SET tipo=:tipo, nombre=:nombre WHERE 
+            \"user\"=:user";
             $stmt=Conectar::getConnection()->prepare($sql);
             $stmt->bindParam(':user', $data['user']);
             $stmt->bindParam(':tipo',$data['tipo']);

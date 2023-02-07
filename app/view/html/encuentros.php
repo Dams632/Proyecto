@@ -86,7 +86,7 @@
                 </tr>
                 <tbody>
                 <?php 
-                include_once "listarEncuentros.php";?>
+                include_once "../../controller/listarEncuentros.php";?>
                 <?php foreach($record as $registro){?>
                 <tr>
                     <td><?php echo$registro['cod_encuentro'];?></td>
