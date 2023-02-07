@@ -13,22 +13,22 @@
         <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a href="#logo">Home</a>
+                    <a href="../admin.php">Inicio</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#about">About</a>
+                    <a href="../canchas.php">Canchas</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="../Ciudades.php">Ciudades</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#services">Services</a>
+                    <a href="../equipos.php">Equipos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#gallery">Gallery</a>
+                    <a href="../jugadorse.php">Jugadores</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="#contact">Contact</a>
+                    <a href="../tecnicos.php">Tecnicos</a>
                 </li>
             </ul>
         </nav>
@@ -86,7 +86,7 @@
                 </tr>
                 <tbody>
                 <?php 
-                include_once "listarEncuentros.php";?>
+                include_once "../../controller/listarEncuentros.php";?>
                 <?php foreach($record as $registro){?>
                 <tr>
                     <td><?php echo$registro['cod_encuentro'];?></td>
