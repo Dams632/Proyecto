@@ -23,7 +23,7 @@
                     <a href="../view/tecnico.php">Tecnicos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/html/encuentros.php">Encuentros</a>
+                    <a href="../view/encuentro.php">Encuentros</a>
                 </li>
                 <li class="menu-nav">
                     <a href="../view/equipos.php">Equipos</a>

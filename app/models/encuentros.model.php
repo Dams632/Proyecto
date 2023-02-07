@@ -1,5 +1,5 @@
 <?php
-require_once "../../config/conexion.php";
+require_once "../config/conexion.php";
 class Encuentros extends Conectar
 {
     public static function mostrarEncuentros()
@@ -47,7 +47,7 @@ class Encuentros extends Conectar
             $stmt->bindParam(':fecha',$fecha);
             $stmt->bindParam(':hora',$hora);
             $stmt->execute();
-            echo 'Se insertaron los datos del usuario';
+            //echo 'Se insertaron los datos del usuario';
             return true;
         }catch(PDOException $th){
             echo $th->getMessage();
@@ -60,12 +60,12 @@ class Encuentros extends Conectar
             $stmt->bindParam(':cod_encuentro', $data['cod_encuentro']);
             $stmt->bindParam(':cod_local',$data['cod_local']);
             $stmt->bindParam(':cant_goles_local',$data['cant_goles_local']);  
-            $stmt->bindParam(':cod_visitante',$data['cod_visintante']);  
+            $stmt->bindParam(':cod_visitante',$data['cod_visitante']);  
             $stmt->bindParam(':cant_goles_visitante',$data['cant_goles_visitante']);  
             $stmt->bindParam(':cod_cancha',$data['cod_cancha']);
             $stmt->bindParam(':fecha',$data['fecha']); 
             $stmt->bindParam(':hora',$data['hora']);   
-            echo 'Se actualizaron los datos';
+            //echo 'Se actualizaron los datos';
             $stmt->execute();
             return true;
         }catch(PDOException $th){
