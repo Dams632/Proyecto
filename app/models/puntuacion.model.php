@@ -27,11 +27,11 @@ class Puntuacion extends Conectar{
     }*/
     public static function guardarPuntuacion($cod_equipo, $par_jugados, $victorias, $derrotas, $empates, $puntos){
         try {
-            $sql = "INSERT INTO puntuacion (cod_equipo, par_jugados, victoria, derrotas, empates, puntos) VALUES (:cod_equipo, :par_jugados, :victorias, :derrotas, :empates,:puntos)";
+            $sql = "INSERT INTO puntuacion (cod_equipo, par_jugados, victorias, derrotas, empates, puntos) VALUES (:cod_equipo, :par_jugados, :victorias, :derrotas, :empates,:puntos)";
             $stmt = Conectar::getConnection()->prepare($sql);
-            $stmt->bindParam(':cod_equipo',$cod_equip);
+            $stmt->bindParam(':cod_equipo',$cod_equipo);
             $stmt->bindParam(':par_jugados',$par_jugados);
-            $stmt->bindParam(':vicrotias',$victorias);
+            $stmt->bindParam(':victorias',$victorias);
             $stmt->bindParam(':derrotas', $derrotas);
             $stmt->bindParam(':empates', $empates);
             $stmt->bindParam(':puntos', $puntos);
