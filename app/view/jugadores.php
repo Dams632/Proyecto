@@ -97,7 +97,7 @@
                 <td><?php echo $registro[3];?></td>
                 <td><?php echo $registro[4];?></td>
                 <td><?php echo $registro[5];?></td>
-                <td><?php echo $registro[6];?></td>
+                <td><?php echo $registro[8];?></td>
                 
                 
                 <td><a href="../controller/eliminarJugador.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>

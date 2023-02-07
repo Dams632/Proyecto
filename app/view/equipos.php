@@ -87,7 +87,7 @@
                   <th>Codigo de equipo</th>
                   <th>Nombre de Equipo</th>
                   <th>Ciudad de Equipo</th>
-                  <th>Identificacion de Tecnico</th>
+                  <th>Tecnico</th>
                   <th>Acción</th>
                 </tr>
               </tr>
@@ -104,7 +104,7 @@
                 <td scope="row"><?php echo $registro[0];?></td>
                 <td><?php echo $registro[1];?></td>
                 <td><?php echo $registro[2];?></td>
-                <td><?php echo $registro[3];?></td>
+                <td><?php echo $registro[5];?></td>
                 
                 
                 <td><a href="../controller/eliminarEquipo.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>

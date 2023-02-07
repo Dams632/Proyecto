@@ -4,7 +4,7 @@ require_once "../config/conexion.php";
 class Puntuacion extends Conectar{
     public static function mostrarPuntuacion(){
         try {
-            $sql= "select * from  puntuacion order by puntos";
+            $sql= "select * from  puntuacion p INNER JOIN  equipos e on (p.cod_equipo=e.cod_equipo)   ORDER BY victorias";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();

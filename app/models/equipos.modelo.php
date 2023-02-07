@@ -17,7 +17,7 @@ class Equipos extends Conectar{
     }
     public static function mostrarEquipos(){
         try {
-            $sql= "SELECT * from  equipos";
+            $sql= "SELECT * from  equipos e INNER JOIN director_tecnico t on e.id_tecnico=t.id_tecnico";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();

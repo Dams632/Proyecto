@@ -26,64 +26,25 @@
         <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a href="../view/Ciudades.php">Ciudades</a>
+                    <a href="../view/verCiudades.php">Ciudades</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/canchas.php">Canchas</a>
+                    <a href="../view/verCanchas.php">Canchas</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/tecnico.php">Tecnicos</a>
+                    <a href="../view/verTecnico.php">Tecnicos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/html/encuentros.php">Encuentros</a>
+                    <a href="../view/verEncuentro.php">Encuentros</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/equipos.php">Equipos</a>
+                    <a href="../view/verEquipos.php">Equipos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/jugadores.php">Jugadores</a>
+                    <a href="../view/verJugadores.php">Jugadores</a>
                 </li>
             </ul>
         </nav>
-    </header>
-
-    <table class="table">
-      <thead>
-        <tr>
-        <div class="card">
-  <img src="..." class="card-img-top" alt="...">
-
-  <div class="card-body">
-    <h5 class="card-title">Jugadores</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        </tr>
-        <tr>
-        <div class="card">
-  <img src="..." class="card-img-top" alt="...">
-
-  <div class="card-body">
-    <h5 class="card-title">Jugadores</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        </tr>
-      </thead>
-      <tbody>
-       
-      </tbody>
-    </table>
-
-  
-<div class="card-body">
-    <h5 class="card-title">Ciudades</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        
+    </header>        
     </body>
 </html>

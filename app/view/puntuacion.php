@@ -73,7 +73,7 @@
             <thead class="table-success table-striped" >
               <tr>
                 <tr>
-                  <th>Codigo de Equipo</th>
+                  <th>Equipo</th>
                   <th>PJ</th>
                   <th>V</th>
                   <th>D</th>
@@ -92,7 +92,7 @@
               foreach($record as $registro){  
               ?> 
               <tr class="">
-                <td scope="row"><?php echo $registro[0];?></td>
+                <td scope="row"><?php echo $registro[7];?></td>
                 <td><?php echo $registro[1];?></td>
                 <td><?php echo $registro[2];?></td>
                 <td><?php echo $registro[3];?></td>

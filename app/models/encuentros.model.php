@@ -10,18 +10,6 @@ class Encuentros extends Conectar
             $stmt->execute();
             $result = $stmt->fetchAll();
             return $result;
-            /*
-            echo '<table>';
-            echo '<tr><th>User</th><th>Tipo</th><th>Nombre</th></tr>';
-            foreach ($result as $row) {
-                echo '<tr>';
-                echo '<td>' . $row['user'] . '</td>';
-                echo '<td>' . $row['tipo'] . '</td>';
-                echo '<td>' . $row['nombre'] . '</td>';
-                echo '</tr>';
-                }
-            echo '</table>';
-            */
         } catch (PDOException $th) {
             echo $th->getMessage();
         }
