@@ -30,6 +30,9 @@
                 <li class="menu-nav">
                     <a href="../view/canchas.php">Canchas</a>
                 </li>
+                <li class="menu-nav">
+                    <a href="../view/puntuacion.php">Puntuacion</a>
+                </li>
             </ul>
         </nav>
     </header>

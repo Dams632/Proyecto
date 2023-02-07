@@ -1,125 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Encuentros</title>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link href="css/style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../css/general.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  </head>
-  <body>
-  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/css/general.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
         <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a href="../../view/admin.php">Inicio</a>
+                    <a href="../admin.php">Inicio</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../../view/Ciudades.php">Ciudades</a>
+                    <a href="../canchas.php">Canchas</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../../view/tecnico.php">Tecnicos</a>
+                    <a href="">Ciudades</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../../view/html/jugadores.php">Jugadores</a>
+                    <a href="#services">Equipos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../../view/equipos.php">Equipos</a>
+                    <a href="#gallery">Gallery</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../../view/canchas.php">Canchas</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
-  <div class="container mt-5">
-     <div class="row">                   
-        <div class="col-md-3">
-            <h1>Ingrese datos</h1>
-              <form action="../../controller/insertarEncuentro.php"  method="POST">
-                    <input type="text" class="form-control mb-3" name="cod_encuentro" placeholder="Codigo de encuentro">
-                  
-                    <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellido">
-                    <input type="text" class="form-control mb-3" name="dorsal" placeholder="Dorsal">
-                    <input type="text" class="form-control mb-3" name="edad" placeholder="Edad">
-                    <input type="text" class="form-control mb-3" name="posicion" placeholder="Posicion">
-                    <div class="row">                       
-                        <select name="cod_equipo">   
-                                 <option value="">Seleccione un Equipo</option>
-                                
-                                 <?php
-                                 include_once('../../controller/listarEquipos.php');
-                                    foreach ($recordss as $registro) {
-                                        ?> 
-                                    
-                                     <option  value="<?php echo $registro[0];?>"> <?php echo $registro[1]; ?></option> </td>
-                                     <?php }?>
-                        </select>                       
-                    </div>
-                           
-                    
-                    <input type="submit" class="btn btn-primary">
-              </form>
-        </div>
-
-        <div class="col-md-8">
-          <table class="table" >
-            <thead class="table-success table-striped" >
-              <tr>
+    <main>
+        <section>
+            <form action="insertarEncuentro.php" method="POST">
+                    <label for="">Codigo del encuentro: </label>
+                    <input type="text" name="cod_encuentro">
+                    <label for="">Codigo 
+                         del local: </label>
+                    <select name="cod_local" id="">
+                        <?php include_once "listarEquipos.php"?>
+                        <?php foreach($recordss as $registro){?>
+                            <option value="<?php echo $registro[0];?>"><?php echo $registro[1]; ?></option>
+                        <?php }?>
+                    </select>   
+                    <label for="">Cantidad de goles del local: </label>
+                    <input type="text" name="cant_goles_local">
+                    <label for="">Codigo del visitante: </label>
+                    <select name="cod_visitante" id="">
+                        <?php include_once "listarEquipos.php"?>
+                        <?php foreach($recordss as $registro){?>
+                        <option value="<?php echo $registro[0];?>"><?php echo $registro[1]; ?></option>
+                        <?php }?>
+                    </select>
+                    <label for="">Cantidad goles del visitante: </label>
+                    <input type="text" name="cant_goles_visitante">
+                    <label for="">Codigo cancha: </label>
+                    <select name="cod_cancha" id="">
+                        <?php include_once "listar_cancha.php"?>
+                        <?php foreach($recordss as $registro){?>
+                        <option value="<?php echo $registro[0];?>"><?php echo $registro[1]; ?></option>
+                        <?php }?>
+                    </select>
+                    <label for="">Fecha: </label>
+                    <input type="date" name="fecha">
+                    <label for="">Hora: </label>
+                    <input type="time" name="hora">
+                    <input type="submit" value="Agregar" > 
+            </form>
+            
+            <!-- <a href="../view/html/insertarUsuario.php"><button>Agregar</button></a> -->
+            <table>
+                <thead></thead>
                 <tr>
-                  <th>Identificacion jugador</th>
-                  <th>Nombres jugador</th>
-                  <th>Apellidos jugador</th>
-                  <th>Dorsal</th>
-                  <th>Edad</th>
-                  <th>Posicion</th>
-                  <th>Equipo</th>
-                  <th>Acción</th>
+                    <th>CODIDO DEL ENCUENTRO</th>
+                    <th>CODIGO DEL LOCAL</th>
+                    <th>CANTIDAD DE GOLES</th>
+                    <th>CODIGO VISITANTE</th>
+                    <th>CANTIDAD GOLES VISITANTE</th>
+                    <th>CODIGO CANCHA</th>
+                    <th>FEHCA</th>
+                    <th>HORA</th>
                 </tr>
-              </tr>
-            </thead>
-
-            <tbody>
-              <?php
-              include_once('../controller/listarJugadores.php');
-              //include_once('../controller/listarTecnicos.php');
-              //include_once('../controller/listar_ciudades.php');  
-              foreach($record as $registro){  
-              ?> 
-              <tr class="">
-                <td scope="row"><?php echo $registro[0];?></td>
-                <td><?php echo $registro[1];?></td>
-                <td><?php echo $registro[2];?></td>
-                <td><?php echo $registro[3];?></td>
-                <td><?php echo $registro[4];?></td>
-                <td><?php echo $registro[5];?></td>
-                <td><?php echo $registro[6];?></td>
-                
-                
-                <td><a href="../controller/eliminarJugador.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
-                <td><button>
-                <form action="../controller/actualizarJugador.php"  method="POST"> 
-                <details>
-                  <summary>Editar</summary>
-                  <div class="col-md-8">
-                      <input type="hidden" class="form-control mb-3" name="id_jugador" placeholder="Numero de identificacion" value="<?php echo $registro[0]?>">
-                      <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $registro[1]?>">
-                      <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $registro[2]?>">
-                      <input type="text" class="form-control mb-3" name="dorsal" placeholder="Dorsal" value="<?php echo $registro[3]?>">
-                      <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" value="<?php echo $registro[4]?>">
-                      <input type="text" class="form-control mb-3" name="posicion" placeholder="Posicion" value="<?php echo $registro[5]?>">
-                      <input type="text" class="form-control mb-3" name="cod_equipo" placeholder="Codigo equipo" value="<?php echo $registro[6]?>">v
-                      <a href="../controller/actualizarJugador.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
-                 </div>
-                </details>
-                </form> 
-              </button>
-              <?php } ?>
-            </tbody>
-          </table>
-        </div>
-      </div>  
-    </div>
-  </body>
+                <tbody>
+                <?php 
+                include_once "../../controller/listarEncuentros.php";?>
+                <?php foreach($record as $registro){?>
+                <tr>
+                    <td><?php echo$registro['cod_encuentro'];?></td>
+                    <td><?php echo$registro['cod_local'];?></td>
+                    <td><?php echo$registro['cant_goles_local'];?></td>
+                    <td><?php echo$registro['cod_visitante'];?></td>
+                    <td><?php echo$registro['cant_goles_visitante'];?></td>
+                    <td><?php echo$registro['cod_cancha'];?></td>
+                    <td><?php echo$registro['fecha'];?></td>
+                    <td><?php echo$registro['hora'];?></td>
+                    <td><a href="eliminarEncuentro.php?encuentroid=<?php echo $registro['cod_encuentro'];?>"><button>Eliminar</button></a>
+                <a  href="editarEncuentro.php?encuentroid=<?php echo $registro['cod_encuentro'];?>"><button>Editar</button></a> 
+            </td>
+            <?php } ?>
+                </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+</body>
 </html>
