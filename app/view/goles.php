@@ -149,7 +149,7 @@
                 
                 <td><a href="../controller/eliminarGoles.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
                 <td><button>
-                <form action="../controller/actualizarJugador.php"  method="POST"> 
+                <form action="../controller/editarGoles.php"  method="POST"> 
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">

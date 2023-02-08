@@ -4,7 +4,7 @@ require_once "../config/conexion.php";
 class Ciudades extends Conectar{
     public static function mostrarCiudades(){
         try {
-            $sql= "select * from  ciudades";
+            $sql= "select * from  ciudades order by nombre asc";
             $stml= Conectar::getConnection()->prepare($sql);
             $stml->execute();
             $resultado=$stml->fetchAll();

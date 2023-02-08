@@ -15,7 +15,7 @@ style.css">
 <header></header>
 <!-- partial:index.partial.html -->
 <div class="screen-1">
-  <form method="post" action="/app/controller/loginUser.php ">
+  <form method="post" action="../controller/loginUser.php ">
     <div class="contein">
       <section>
         <img class="logo2" src="https://upload.wikimedia.org/wikipedia/commons/7/76/FCF-Torneo-Futsal.jpg" height=150px width=inherit></img>
@@ -45,7 +45,7 @@ style.css">
         <label for="email">Username</label>
         <div class="sec-2">
           <ion-icon name="person-outline"></ion-icon>
-          <input type="text" name="usuario" placeholder="Username" required/>
+          <input type="text" name="user" placeholder="Username" required/>
         </div>
       </div>
       <div class="password">

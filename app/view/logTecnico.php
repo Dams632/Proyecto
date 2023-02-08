@@ -22,26 +22,17 @@
     </head>
     <body>
     <header>
-        
+
         <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a href="../view/verCiudades.php">Ciudades</a>
+                    <a href="">Bienvenido</a>
                 </li>
+                <li></li>
+                <li></li>
+                <li></li>
                 <li class="menu-nav">
-                    <a href="../view/verCanchas.php">Canchas</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/verTecnico.php">Tecnicos</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/verEncuentro.php">Encuentros</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/verEquipos.php">Equipos</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/verJugadores.php">Jugadores</a>
+                <a href="../view/login.php">Cerrar sesión</a>
                 </li>
             </ul>
         </nav>
@@ -51,42 +42,45 @@
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Canchas</h5>
+        <p class="card-text">Aqui podrá ver todas las canchas disponibles para el torneo</p>
+        <a href="../view/verCanchas.php" class="btn btn-primary">Ir</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Jugadores</h5>
+        <p class="card-text">Aqui podrá agregar los jugadores pertenecientes a su equipo</p>
+        <a href="../view/jugadores.php" class="btn btn-primary">Ir</a>
       </div>
     </div>
   </div>
 </div>
 
+
 <div class="row">
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Equipos</h5>
+        <p class="card-text">Aqui podrá observar los equipos que están disputando el torneo</p>
+        <a href="../view/verEquipos.php" class="btn btn-primary">Ir</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Encuentros</h5>
+        <p class="card-text">Aqui encontrará los encuentros que ya se disputaron y su resultado</p>
+        <a href="../view/verEncuentro.php" class="btn btn-primary">Ir</a>
       </div>
     </div>
   </div>
 </div>
+
+
     </body>
 </html>

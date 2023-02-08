@@ -68,7 +68,7 @@
                                     foreach ($record as $registro) {
                                         ?> 
                                     <tr class="">
-                                     <td> <option value="<?php echo $registro[0];?>"> <?php echo $registro[1]; ?></option> </td>
+                                     <td> <option value="<?php echo $registro[0];?>"> <?php echo $registro[1]." ".$registro[2]; ?></option> </td>
                                      <?php }?>             
                                 </tbody>
                             </table>
@@ -104,7 +104,7 @@
                 <td scope="row"><?php echo $registro[0];?></td>
                 <td><?php echo $registro[1];?></td>
                 <td><?php echo $registro[2];?></td>
-                <td><?php echo $registro[5];?></td>
+                <td><?php echo $registro[5]." ".$registro[6];?></td>
                 
                 
                 <td><a href="../controller/eliminarEquipo.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>

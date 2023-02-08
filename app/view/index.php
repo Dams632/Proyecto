@@ -22,9 +22,15 @@
     <title> Torneo Futsal </title>
   </head>
   <body class="d-flex vw-100 vh-100 align-items-center justify-content-center">
-    <button class="btn btn-primary">
-      <i class="fab fa-accessible-icon me-1"></i>Hello, world!
-    </button>
+    
+
+
+
+
+
+
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
