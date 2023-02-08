@@ -18,7 +18,7 @@ header{
 }
 .bar-nav li{
     list-style-type: none;
-    padding: 10px 6% ;
+    padding: 10px 2% ;
 }
 ul{
     display: flex;
