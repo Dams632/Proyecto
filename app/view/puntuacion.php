@@ -35,6 +35,9 @@
                 <li class="menu-nav">
                     <a href="../view/jugadores.php">Jugadores</a>
                 </li>
+                <li class="menu-nav">
+                    <a href="../view/goles.php">Goles</a>
+                </li>
             </ul>
         </nav>
     </header>

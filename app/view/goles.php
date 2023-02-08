@@ -148,23 +148,7 @@
                 
                 
                 <td><a href="../controller/eliminarGoles.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
-                <td><button>
-                <form action="../controller/editarGoles.php"  method="POST"> 
-                <details>
-                  <summary>Editar</summary>
-                  <div class="col-md-8">
-                      <input type="hidden" class="form-control mb-3" name="id_jugador" placeholder="Numero de identificacion" value="<?php echo $registro[0]?>">
-                      <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $registro[1]?>">
-                      <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $registro[2]?>">
-                      <input type="text" class="form-control mb-3" name="dorsal" placeholder="Dorsal" value="<?php echo $registro[3]?>">
-                      <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" value="<?php echo $registro[4]?>">
-                      <input type="text" class="form-control mb-3" name="posicion" placeholder="Posicion" value="<?php echo $registro[5]?>">
-                      <input type="text" class="form-control mb-3" name="cod_equipo" placeholder="Codigo equipo" value="<?php echo $registro[6]?>">v
-                      <a href="../controller/actualizarJugador.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
-                 </div>
-                </details>
-                </form> 
-              </button>
+               
               <?php } ?>
             </tbody>
           </table>
