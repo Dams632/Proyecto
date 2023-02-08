@@ -43,7 +43,7 @@
             <thead class="table-success table-striped" >
               <tr>
                 <tr>
-                  <th>Codigo de Equipo</th>
+                  <th>Equipo</th>
                   <th>PJ</th>
                   <th>V</th>
                   <th>D</th>
