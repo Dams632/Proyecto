@@ -16,9 +16,6 @@
                     <a href="../view/logTecnico.php">Inicio</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/verCiudades.php">Ciudades</a>
-                </li>
-                <li class="menu-nav">
                     <a href="../view/verTecnico.php">Tecnicos</a>
                 </li>
                 <li class="menu-nav">

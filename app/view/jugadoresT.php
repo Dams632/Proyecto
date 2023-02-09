@@ -13,28 +13,22 @@
         <nav>
             <ul class="bar-nav">
                 <li class="menu-nav">
-                    <a href="../view/admin.php">Inicio</a>
+                    <a href="../view/logTecnico.php">Inicio</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/Ciudades.php">Ciudades</a>
+                    <a href="../view/verTecnico.php">Tecnicos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/tecnico.php">Tecnicos</a>
+                    <a href="../view/verEncuentro.php">Encuentros</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/encuentro.php">Encuentros</a>
+                    <a href="../view/verEquipos.php">Equipos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/equipos.php">Equipos</a>
+                    <a href="../view/verCanchas.php">Canchas</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/canchas.php">Canchas</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/puntuacion.php">Puntuacion</a>
-                </li>
-                <li class="menu-nav">
-                    <a href="../view/goles.php">Goles</a>
+                    <a href="../view/verPuntuacion.php">Puntuacion</a>
                 </li>
             </ul>
         </nav>
@@ -43,7 +37,7 @@
      <div class="row">                   
         <div class="col-md-3">
             <h1>Ingrese datos</h1>
-              <form action="../controller/agregarJugador.php"  method="POST">
+              <form action="../controller/agregarJugadorT.php"  method="POST">
                     <input type="text" class="form-control mb-3" name="id_jugador" placeholder="Documento Jugador">
                     <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
                     <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellido">
@@ -103,9 +97,9 @@
                 <td><?php echo $registro[8];?></td>
                 
                 
-                <td><a href="../controller/eliminarJugador.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
+                <td><a href="../controller/eliminarJugadorT.php?txtcodigo=<?php echo $registro[0];?>"><button>Eliminar</button></a>
                 <td><button>
-                <form action="../controller/actualizarJugador.php"  method="POST"> 
+                <form action="../controller/actualizarJugadorT.php"  method="POST"> 
                 <details>
                   <summary>Editar</summary>
                   <div class="col-md-8">
@@ -116,7 +110,7 @@
                       <input type="text" class="form-control mb-3" name="edad" placeholder="Edad" value="<?php echo $registro[4]?>">
                       <input type="text" class="form-control mb-3" name="posicion" placeholder="Posicion" value="<?php echo $registro[5]?>">
                       <input type="text" class="form-control mb-3" name="cod_equipo" placeholder="Codigo equipo" value="<?php echo $registro[6]?>">
-                      <a href="../controller/actualizarJugador.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
+                      <a href="../controller/actualizarJugadorT.php?txtcodigo=<?php echo $registro[0];?>"><input type="submit" class="btn btn-primary" value="Actualizar"></a>   
                  </div>
                 </details>
                 </form> 

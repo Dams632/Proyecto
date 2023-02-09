@@ -35,38 +35,14 @@
                 <li class="menu-nav">
                     <a href="../view/jugadores.php">Jugadores</a>
                 </li>
+                <li class="menu-nav">
+                    <a href="../view/goles.php">Goles</a>
+                </li>
             </ul>
         </nav>
     </header>
   <div class="container mt-5">
-     <div class="row">                   
-        <div class="col-md-3">
-            <h1>Ingrese datos</h1>
-              <form action="../controller/agregarPuntuacion.php"  method="POST">
-              <div class="row">                       
-                        <select name="cod_equipo">   
-                                 <option value="">Seleccione un Equipo</option>
-                                
-                                 <?php
-                                 include_once('../controller/listarEquipos.php');
-                                    foreach ($recordss as $registro) {
-                                        ?> 
-                                    
-                                     <option  value="<?php echo $registro[0];?>"> <?php echo $registro[1]; ?></option> </td>
-                                     <?php }?>
-                        </select>                       
-                    </div>
-                    <br>
-                    <input type="text" class="form-control mb-3" name="par_jugados" placeholder="Partidos Jugados">
-                    <input type="text" class="form-control mb-3" name="victorias" placeholder="Partidos ganados">
-                    <input type="text" class="form-control mb-3" name="derrotas" placeholder="Partidos Perdidos">
-                    <input type="text" class="form-control mb-3" name="empates" placeholder="Partidos Empatados">
-                    <input type="text" class="form-control mb-3" name="puntos" placeholder="Puntos">
-                           
-                    
-                    <input type="submit" class="btn btn-primary">
-              </form>
-        </div>
+    
 
         <div class="col-md-8">
           <table class="table" >

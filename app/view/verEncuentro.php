@@ -16,13 +16,10 @@
                     <a href="../view/logTecnico.php">Inicio</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/verCiudades.php">Ciudades</a>
-                </li>
-                <li class="menu-nav">
                     <a href="../view/verTecnico.php">Tecnicos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/verJugadores.php">Jugadores</a>
+                    <a href="../view/jugadoresT.php">Jugadores</a>
                 </li>
                 <li class="menu-nav">
                     <a href="../view/verEquipos.php">Equipos</a>
