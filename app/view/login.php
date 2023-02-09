@@ -45,7 +45,7 @@ style.css">
         <label for="email">Username</label>
         <div class="sec-2">
           <ion-icon name="person-outline"></ion-icon>
-          <input type="text" name="usuario" placeholder="Username" required/>
+          <input type="text" name="username" placeholder="Username" required/>
         </div>
       </div>
       <div class="password">
