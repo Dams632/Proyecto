@@ -29,7 +29,7 @@
                     <a href="../view/verEquipos.php">Equipos</a>
                 </li>
                 <li class="menu-nav">
-                    <a href="../view/verJugadores.php">Jugadores</a>
+                    <a href="../view/jugadoresT.php">Jugadores</a>
                 </li>
                 <li class="menu-nav">
                     <a href="../view/VerPuntuacion.php">Puntuacion</a>

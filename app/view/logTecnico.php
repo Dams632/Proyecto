@@ -53,7 +53,7 @@
       <div class="card-body">
         <h5 class="card-title">Jugadores</h5>
         <p class="card-text">Aqui podrá agregar los jugadores pertenecientes a su equipo</p>
-        <a href="../view/jugadores.php" class="btn btn-primary">Ir</a>
+        <a href="../view/jugadoresT.php" class="btn btn-primary">Ir</a>
       </div>
     </div>
   </div>
